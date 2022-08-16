@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">SmsForwarder</string>
-    <string name="notification_content">Forward SMS (and others!) to another app/device, a must-have for anyones\' secondary smartphone. \nFree and open source, do NOT buy or sell this App.</string>
+    <string name="notification_content">Forward SMS (and others!) to another app/device, a must-have for anyones\' secondary smartphone. Free and open source, do NOT buy or sell this App.</string>
     <!--Common-->
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -34,7 +34,7 @@
     <string name="check_for_updates">Check for updates</string>
     <string name="auto_startup">Auto startup</string>
     <string name="show_tips">Show tips</string>
-    <string name="show_tips2">Suggest old bird close prompt, the page is more refreshing, reduce pop-up prompt</string>
+    <string name="show_tips2">Suggest experienced user uncheck this option.</string>
     <string name="open_source">Repo URL</string>
     <string name="synchronize_mirror">Repo Mirror</string>
     <string name="qq_group">QQ Group</string>
@@ -128,13 +128,13 @@
     <string name="set_bark_server">Bark-Server</string>
     <string name="set_bark_server_tips"> e.g. https://api.day.app/XXXXXXXX/</string>
     <string name="set_bark_icon">Bark-Icon</string>
-    <string name="set_bark_icon_tips">Optional, fill in the Url, the image should not be too big</string>
+    <string name="set_bark_icon_tips">Optional, URL for Bark icon in limited size</string>
     <string name="set_name">Name/Staus</string>
     <string name="dingding_token">Token（Not contain links）</string>
     <string name="dingding_token_tips">e.g. the XXX part of https://oapi.dingtalk.com/robot/send?access_token=XXX</string>
     <string name="dingding_secret">Secret (optional)</string>
-    <string name="dingding_at">At Mobiles</string>
-    <string name="dingding_at_tips">e.g. 18888888888,19999999999</string>
+    <string name="dingding_at">Forward with \@ tag</string>
+    <string name="dingding_at_tips">Separate with a \"\,\" e.g. 18888888888,19999999999</string>
     <string name="email_host">Server Host</string>
     <string name="smtp_port">Server Port</string>
     <string name="enable_ssl">SSL</string>
@@ -156,17 +156,17 @@
     <string name="is_at_all">Is at all</string>
     <string name="specified_member">Specified Member</string>
     <string name="at_all">\@all</string>
-    <string name="specified_member_tips">Tip：Specify members receive messages, member ID list (multiple recipients with \'|\' space, maximum 1000)</string>
-    <string name="QYWXGroupRobotWebHook">WebHook</string>
+    <string name="specified_member_tips">Tip： Specify recipients, separate recipients with a space after a \'|\' mark, \(maximum number: 1000\)</string>
+    <string name="QYWXGroupRobotWebHook">WebHook address</string>
     <string name="QYWXGroupRobotWebHookTips">e.g. https://qyapi.weixin.qq.com/cgixx?key=xxx</string>
-    <string name="ServerChanSendKey">ServerChan\'s SendKey</string>
-    <string name="TelegramApiToken">ApiToken or Custom address</string>
-    <string name="TelegramChatId">ChatId</string>
+    <string name="ServerChanSendKey">SendKey for ServerChan</string>
+    <string name="TelegramApiToken">ApiToken or Custom address for Telegram Bot \(start with http\)</string>
+    <string name="TelegramChatId">ChatId for recipient\(s\) or group\(s\) </string>
     <string name="Method" formatted="false">Method</string>
     <string name="WebNotifyWebServer">WebServer</string>
     <string name="WebNotifyWebServerTips">e.g. https://a.b.com/msg?token=xyz</string>
     <string name="WebNotifyWebParams">WebParams</string>
-    <string name="WebNotifyWebParamsTips">e.g. payload=%7B%22text%22%3A%22[msg]%22%7D [msg] will be replaced with text message content. \nSupport Json format, for example: {"text":[MSG]}.\n Note: MSG is automatically utF-8 encoded in addition to JSON format</string>
+    <string name="WebNotifyWebParamsTips">e.g. payload=%7B%22text%22%3A%22[msg]%22%7D [msg] will be replaced with text message content. \nSupport Json format, for example: {"text":[MSG]}.\n Note: MSG is automatically UTF-8 encoded in addition to JSON format</string>
     <string name="WebNotifySecret">Secret (sign is not counted if left blank)</string>
     <string name="SmsSimSlot">SIM Slot</string>
     <string name="same_source">Same source</string>
@@ -181,19 +181,20 @@
     <string name="low_power_alarm_threshold">Low power alarm</string>
     <string name="low_power_alarm_threshold_tips">Value range: 0–99.\nLeft blank or 0 is disabled</string>
     <string name="retry_interval">Retry interval</string>
-    <string name="retry_interval_tips">Disabled when times = 0,\nthe interval is incremented</string>
-    <string name="forward_sms">Forward sms</string>
-    <string name="forward_sms_tips">Main switch, requires permissions to read and sned SMS messages, especially verification SMS texts.</string>
+    <string name="retry_interval_tips">Disabled if times = 0,\ninterval time is incremented</string>
+    <string name="forward_sms">Forward SMS</string>
+    <string name="forward_sms_tips">Main switch, requires permissions to read and sned SMS messages, especially SMS texts with OTP or security codes.</string>
     <string name="forward_missed_calls">Forward calls log</string>
-    <string name="forward_missed_calls_tips">Main switch, requires permissions to read call log and contacts.</string>
+    <string name="forward_missed_calls_tips">Main switch, requires permissions to read call log and contacts. Enable \"Auto close Ntf.\" to avoide multiple notifications stacks.</string>
     <string name="forward_app_notify">Forward app Ntf.</string>
     <string name="forward_app_notify_tips">Main switch, requires permission to read notification.</string>
     <string name="cancel_app_notify">Auto close Ntf.</string>
-    <string name="not_user_present">Not User Present</string>
+    <string name="not_user_present">Only when screen is locked</string>
     <string name="enable_custom_templates">Global Custom Template</string>
     <string name="enable_custom_templates_tips">Priority: custom template for forwarding rules > Global custom template > System default</string>
     <string name="enable_regex_replace">Enable regular replacement content</string>
     <string name="enable_regex_replace_tips">Format: RegularExpression===ReplacementResult,One rule per line.\ne.g. (\\d{3})\\d+(\\d{4})===$1****$2</string>
+    <string name="regex_check_tips">Format check: line %d is badly formatted! Format: RegularExpression===ReplacementResult</string>
     <string name="enable_exclude_from_recents">Hide from recent Apps</string>
     <string name="enable_exclude_from_recents_tips">Enable to hide SmsForwarder from recent Apps to keep it alive</string>
     <string name="custom_templates">Custom templates</string>
@@ -226,8 +227,7 @@
     <string name="get">GET</string>
     <!--CloneActivity-->
     <string name="local_ip">Local IP：</string>
-    <string name="operating_instruction">Instructions: \n[Note] The APP version of the sender and receiver must be the same!\n1. Please keep the SOURCE and DESTINATION phones in the same Wi-Fi network, and do not turn on isolation. \n2. Tap "Send" on SOURCE mobile phone, and get "server IP" \n3. After filling in "Server IP" on DESTINATION phone, tap "Receive". \n [NOTE:] sender(s), forwarding rule(s) and log(s) will be overwritten after cloning!</string> <!-- 原文是“新旧手机”，英文翻译中处理为“源”手机和“目标”手机，因为担心“新旧”的表述引起混淆（有没一种可能就是用户就是用从新手机的设备复制到旧手机上去呢？）。 -->
-    <string name="operating_instruction_offline">[NOTE:] sender(s), forwarding rule(s) and log(s) will be overwritten after cloning!</string> <!-- 原文是“新旧手机”，英文翻译中处理为“源”手机和“目标”手机，因为担心“新旧”的表述引起混淆（有没一种可能就是用户就是用从新手机的设备复制到旧手机上去呢？）。 -->
+    <string name="operating_instruction">Instructions: \n[Note] Please make sure APP versions of SOURCE and DESTINATION are the same!\n1. Please keep the SOURCE and DESTINATION phones in the same Wi-Fi network, and do not turn on isolation. \n2. Tap "Send" on SOURCE mobile phone, and get "server IP" \n3. After filling in "Server IP" on DESTINATION phone, tap "Receive". \n [NOTE:] sender(s), forwarding rule(s) and log(s) will be overwritten after cloning!</string> <!-- 原文是“新旧手机”，英文翻译中处理为“源”手机和“目标”手机，因为担心“新旧”的表述引起混淆（有没一种可能就是用户就是用从新手机的设备复制到旧手机上去呢？）。 -->
     <string name="send">Start</string>
     <string name="stop">Stop</string>
     <string name="export">Export</string>
@@ -292,7 +292,7 @@
     <string name="password">Password</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="agree">Agree</string>
-    <string name="refuse">Refuse</string>
+    <string name="disagree">Disagree</string>
     <string name="privacy_policy_text">&#160;&#160;SmsForwarder (the "Application/App"), is 100\% free and open source, and is compliled and released basing on repository hosted on GitHub. The App will not collect any of your privacy data!\n\n Version information of the App will be sent in the following situations: \n&#160;&#160;1. As startup, version information will be sent to "Umeng +· U-APP Mobile Statistics" for user retention analyze and crash stats;\n&#160;&#160;2. Manual update check triggered by user;\n&#160;&#160;The App collects no any other data!!\n\n&#160;&#160;The App collects and uses version information only in accordance with the Privacy Policy, and will not collect any other information as an abuse of users\' consent to the Privacy Policy;</string>
     <string name="GotifyWebServer">WebServer</string>
     <string name="GotifyWebServerTips"><![CDATA[eg.: https://push.ppps.cn/message?token=<apptoken>]]></string>
@@ -353,7 +353,7 @@
     <string name="rule">Rule: </string>
     <string name="time">Time: </string>
     <string name="result">\n\nResult: \n</string>
-    <string name="processing">In the processing…</string>
+    <string name="processing">Processing…</string>
     <string name="tag_from">{{FROM}}</string>
     <string name="tag_sms">{{SMS}}</string>
     <string name="tag_package_name">{{PACKAGE_NAME}}</string>
@@ -367,12 +367,12 @@
     <string name="rule_call">CALL</string>
     <string name="rule_app">APP</string>
     <string name="rule_all">ALL</string>
-    <string name="rule_transpond_all">Transpond All</string>
-    <string name="rule_phone_num">Phone Num</string>
+    <string name="rule_transpond_all">Forward All</string>
+    <string name="rule_phone_num">Phone No.</string>
     <string name="rule_msg_content">Msg Content</string>
-    <string name="rule_multi_match">Multi Match</string>
+    <string name="rule_multi_match">Multiple Filters</string>
     <string name="rule_package_name">Package Name</string>
-    <string name="rule_inform_content">Inform Content</string>
+    <string name="rule_inform_content">Notification Content</string>
     <string name="rule_card">&#160;Card&#160;</string>
     <string name="rule_when">&#160;When&#160;</string>
     <string name="rule_fw_to">&#160;Fw.&#160;To&#160;</string>
@@ -385,17 +385,17 @@
     <string name="rule_notcontain">NOTCONTAIN</string>
     <string name="rule_regex">REGEX</string>
     <string name="package_name_copied">Package name copied:</string>
-    <string name="loading_user_app">Loading user app, please wait…</string>
-    <string name="loading_system_app">Loading system app, please wait…</string>
-    <string name="crash_tip">Very sorry! The program has an exception and is about to exit…</string>
-    <string name="enable_phone_fw_tips">A call type must be selected to enable call log forwarding!</string>
+    <string name="loading_user_app">Loading user Apps, please wait…</string>
+    <string name="loading_system_app">Loading system Apps, please wait…</string>
+    <string name="crash_tip">Terribly sorry! The App met an exception and is about to exit…</string>
+    <string name="enable_phone_fw_tips">Please select a call type to enable call log forwarding!</string>
     <string name="notification_service_is_on">Notification service is on</string>
     <string name="tips_battery_level_alarm_once">[Note] The upper and lower limits of the battery warning threshold are 0, and the continuous warning does not work.</string>
     <string name="tips_compatible_solution">Compatible solution</string>
     <string name="tips_wait_3_seconds">Please wait 3 seconds after clicking start</string>
-    <string name="tips_clone_done">One-click clone operation is complete! \nPlease check whether the general settings and switches are turned on!</string>
+    <string name="tips_clone_done">One-click clone operation completed! \nPlease check whether switches in General settings are turned on!</string>
     <string name="tips_clone_failed">One-click clone failed:</string>
-    <string name="tips_versions_inconsistent">The APP versions of the sender and the receiver are inconsistent, and cannot be cloned with one click!</string>
+    <string name="tips_versions_inconsistent">The APP versions of the SOURCE and the DESTINATION are inconsistent, and cannot be cloned with one click!</string>
     <string name="tips_get_info_failed">Failed to get one-click clone information from sender</string>
     <string name="linkman">Linkman:</string>
     <string name="via_number">Via Number:</string>
@@ -439,17 +439,17 @@
     <string name="toast_denied">获取必需的权限失败，APP功能可能受限！</string>
     <string name="tips_first_time">\n&#160;&#160;&#160;&#160;首次使用请按照1234步骤顺序设置，数字点亮表示该步骤已设置(4点亮表示有成功日志)！\n\n&#160;&#160;&#160;&#160;根据以往用户反馈，90%的新用户最终排查结果都是手机权限设置问题，5%的用户是APP保活问题，其他问题排查参考Wiki中的常见问题（APP右上角使用帮助入口）\n\n&#160;&#160;&#160;&#160;强烈建议：手动排查一下系统设置：自启动、电源策略、APP的权限，把所有权限打开（始终允许，不要“使用中允许”，MIUI系统就全部变绿），特别是一些国产定制系统加入隐私保护、验证码保护等（例如：MIUI 系统的 空白通行证）\n\n&#160;&#160;&#160;&#160;请选择是否立即“前往系统设置”检查，或“稍后自行处理”？</string>
     <string name="play_silence_music">Play silent music in the background</string>
-    <string name="play_silence_music_tips">Play silent music to keep running in the background, which may consume more power, enable it on demand</string>
-    <string name="one_pixel">One Pixel</string>
-    <string name="one_pixel_activity">One Pixel Activity</string>
+    <string name="play_silence_music_tips">Play silent music to keep alive, but to consume more power, check if needed.</string>
+    <string name="one_pixel">One-Pixel</string>
+    <string name="one_pixel_activity">One-Pixel Keep-alive</string>
     <string name="one_pixel_activity_tips">This can change the process priority from 4 to 1</string>
     <string name="hint_from_add">Fill in the username before @</string>
     <string name="hint_from_add_full">format: AAA@BBB.CCC</string>
     <string name="other_mail_type">Other</string>
-    <string name="tips_other_mail_type">For other email addresses, please fill in the complete email address and manually fill in the SMTP server information</string>
+    <string name="tips_other_mail_type">Other email addresses (provide server info. below)</string>
     <string name="optional">Optional</string>
-    <string name="TelegramChatIdTips">Follow the steps in the wiki to obtain it</string>
-    <string name="network_model">网络模式</string>
-    <string name="offline_mode">离线模式</string>
+    <string name="TelegramChatIdTips">Follow the steps in the wiki to obtain ChatID</string>
+    <string name="network_model">Online Mode</string>
+    <string name="offline_mode">Offline mode</string>
     <string name="tips_backup_path">Backup Path:</string>
 </resources>
